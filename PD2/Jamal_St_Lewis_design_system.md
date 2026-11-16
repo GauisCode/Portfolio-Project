@@ -252,13 +252,13 @@ The navigation links wrap, and the content appears in a vertical reading order.
 The portfolio featurecard currently has a card with a github link, a resume blurb, and the Yatzy game.
 ### Resume page Mock-up
 
-![Resume page mock-up](./screenshots/portfolio-resume-screenshot.png)
+![Resume page mock-up](./Screenshots/portfolio-resume-screenshot.png)
 
 The resume page uses the shared dark-green navigation header, gold accent borders, and a white resume card for readable professional content.
 
 ### Projects page Mock-up
 
-![Projects page mock-up](./screenshots/portfolio-projects-screenshot.png)
+![Projects page mock-up](./Screenshots/portfolio-projects-screenshot.png)
 
 The projects page uses the shared navigation and page styling. It currently has the Yatzy game project showcase
 
