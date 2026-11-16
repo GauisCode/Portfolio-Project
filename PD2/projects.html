@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Project Portfolio Jamal St Lewis">
+        <title>Projects | Jamal St Lewis</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header class="site-header">
+            <nav class="site-nav" aria-label="Main Navigation">
+                <a class="site-logo" href="index.html">JSL</a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" >Home </a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html" aria-current="page">Projects</a></li>
+                    <li><a href="https://github.com/GauisCode"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="standard-page">
+            <section class="page-section">
+                <p class="eyebrow">Portfolio</p>
+                <h1>Projects</h1>
+                <p class="page-intro">
+                    This page will feature a collection of my projects completed throughout both
+                    my academic career and personal learnings. I am currently pursure an interest
+                    in a full-stack skillset including programming, web development, databases,
+                    business systems and some networking.
+                </p>
+                <article class="project-showcase"
+         id="yatzee"
+         aria-labelledby="yatzee-title">
+
+    <header class="project-heading">
+        <p class="eyebrow">Featured Project · CST3106</p>
+        <h2 id="yatzee-title">Yatzee Dice Game</h2>
+
+        <p class="project-summary">
+            My Yatzy game is a single-player web application built with HTML, CSS, and JavaScript. 
+            The application is split between the server and the client. 
+            The client runs in browswer to handle the interface, scoring and the selected held dice. 
+            The server generates the random dice values for the rolled dice and will send it back to the browser interace.
+        </p>
+    </header>
+
+
+  
+
+    <figure class="project-figure">
+        <a href="Projects/Yatzee/Images/YtzWideFullScreenshot.png">
+            <img
+                class="project-image"
+                src="Projects/Yatzee/Images/YtzWideFullScreenshot.png"
+                alt="Yatzee game interface showing five dice and the scorecard"
+                width="100"
+            >
+        </a>
+
+        <figcaption>
+            The game interface, including the dice controls and scorecard.
+            Select the image to view it at full size.
+        </figcaption>
+    </figure>
+
+    <section class="project-description"
+             aria-labelledby="yatzee-about-title">
+
+        <h3 id="yatzee-about-title">About the project</h3>
+
+        <p>
+            I developed this game through a series of web development
+            labs for my CST306 Web Development class at Algonquin Colleg. This started as a browser-based application and evolved
+            into a client-server application, with dice rolls generated
+            by a Node.js/Express server.
+        </p>
+
+        <p>
+            Players can roll dice, hold selected dice between rolls,
+            and record results using an interactive scorecard.
+            Dot-based dice faces and rotation animations provide
+            visual feedback.
+        </p>
+    </section>
+    <section aria-labelledby="yatzee-assignment-progression">
+        <h3 id="yatzee-assignment-progression">Progression by assigment</h3>
+
+    <p class="eyebrow">Assignment 1</p>
+    <p>Creation of a single player Yatzee game using an HTML for the UI and Javascript for the gamestate management.</p>
+    <p>Components include:</p>
+    <ul>
+        <li>Game Rules Implementation: Five dice, player selection of specific dice, re-rolling unselected dice, scoring calculation and scoring tracking</li>
+        <li>A user interface with with a game board, a scorecard and buttons for game actions like dice rolling</li>
+        <li>Game state management of rounds, dice rolling logic and gameplay instructions</li>
+        <li>Game ending after a set number of rounds</li>
+        <li>Responisble design for various screen sizes</li>
+        <li>Readme Markdown File</li>
+        <li>Github Submission</li>
+    </ul>
+
+    <p class="eyebrow">Assignment 2</p>
+    <p>Using Node.js and Express for server-side integration by shifting the calculations to the sever. The client-side will still handle presentation and interactions. </p>
+    <p>Components include:</p>
+    <li>
+        <ul>Server Setup using node.js and Express</ul>
+        <ul>API creation and proper HTTP methods (GET, POST, PUT, DELETE)</ul>
+        <ul>Client-side javascript modification to use Fetch API for asynchronous requests</ul>
+        <ul>Server responses update game UI</ul>
+        <ul>Current game-state stored on server</ul>
+        <ul>Server side handles calculations</ul>
+        <ul>Readme Markdown file</ul>
+        <li>Github Submission</li>
+    </li>
+
+    </section>
+
+
+    <div class="project-details">
+        <section aria-labelledby="yatzee-features-title">
+            <h3 id="yatzee-features-title">Key features</h3>
+
+            <ul>
+                <li>Server-generated dice rolls</li>
+                <li>Selectable dice for holding and rerolling</li>
+                <li>Interactive scorecard and running totals</li>
+                <li>Dot-based dice faces and rotation animations</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="yatzee-learning-title">
+            <h3 id="yatzee-learning-title">What I learned</h3>
+
+            <ul>
+                <li>Managing game state with JavaScript</li>
+                <li>Separating game logic from interface updates</li>
+                <li>Requesting data from an Express endpoint</li>
+                <li>Using jQuery for visual effects</li>
+            </ul>
+        </section>
+
+        
+
+
+
+    </div>
+
+        <section aria-labelledby="yatzee-technology-title">
+            <h3 id="yatzee-technology-title">Technologies used</h3>
+        
+            <ul class="technology-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>Node.js</li>
+                <li>Express</li>
+            </ul>
+        </section>
+    <section aria-labelledby="yatzee-main-files-title">
+        <h3 id="yatzee-main-files-title">Main files and responsibilities</h3>
+    
+        
+        <p class="eyebrow">index.html</p>
+        <p>Page structure and main interface constructed in HTML & Javascript.
+        It houses the event handlers, score card, dice drawing and animation components</p>
+
+
+
+        <p class="eyebrow">YatzeeStyles.CSS</p>
+        <p>The stylesheet that determines the colours, layouts and appearance for the interface and its components</p>
+
+        <p class="eyebrow">YatzeeDice.js</p>
+        <p>Controls the dice calculations and values. 
+            It will store the dice values, hold dice states, request values from the server adn reset the dice</p>
+
+        <p class="eyebrow">YatzeeEngine.js</p>
+        <p>Regulates the scoring by validating the dice and scoring values, calculating the scores and bonuses, as well as scorecard completion</p>
+
+        <p class="eyebrow">YatzeeGame.js</p>
+        <p>Handles the turn tracking, roll count and game termination</p>
+
+        <p class="eyebrow">server.js</p>
+        <p>The express server is houses here and runs the dice-roll value calculations</p>
+
+    </section>
+    <section aria-labelledby="yatzee-html">
+        <h3 id="yatzee-html">HTML Page Design</h3>
+        <p>HTML provides the structure of the game. The page uses elements such as Header, Main, Section, and Footer to organize the content. 
+            The main interface contains a dice-and-controls panel, a scorecard panel, and instructions explaining how to play.</p>
+        <p>The dice and game controls use actual Button elements. The scorecard uses a table with a caption, column headings, and
+            rows for totals. JavaScript creates the scoring-category rows when the page first loads, using the category
+            information stored in YatzeeEngine.js. This avoids manually writing a separate HTML row for every category</p>
+    </section>
+    <section aria-labelledby="yatzee-javascript">
+        <h3 id="yatzee-javascript">JavaScript: game logic and interface updates</h3>
+
+        <p>The game uses three JavaScript classes: YatzeeDice, YatzeeEngine, and YatzeeGame. Each class groups related information
+        and functions together.</p>
+
+        <p class="eyebrow">YatzeeDice</p>
+        <p>This calss stores two different arrays. The first contains all five dice values.
+            The second contains a boolean values for each dice to indicate whether it should be held or kept during the next
+            roll. </p>
+
+        <p class="eyebrow">YatzeeEngine</p>
+        <p>This class contains the scoring rules. 
+            It calculates category scores, records selections, adds bonuses, and checks whether all categories have been filled.
+            Any unused and available categories are stores as null, while 0 indicates a used category that provides zero points.</p>
+        
+        <p class="eyebrow">YatzeeGame</p>
+        <p>This class coordinates the other two YatzeeEngine and YatzeeDice classes. It tracks the current round, number of rolls, total score, game-over
+        state. It also prevents actions such as rolling more than three times in a turn or selecting a score before rolling.</p>
+
+        
+
+
+        <p>JavaScript controls the game logic and updates the interface. The code is split into several files, each with a specific purpose. 
+            YatzeeDice.js manages the dice values and holds, YatzeeEngine.js handles scoring, and YatzeeGame.js tracks turns and rolls. 
+            The main index.html file contains event handlers for user interactions, such as rolling dice, holding dice, and recording scores.</p>
+    </section>
+
+    <section aria-labelledby="yatzee-animation">
+        <h3 id="yatzee-animation">Animation and Gamplay</h3>
+
+        <p class="eyebrow">Event Handlers</p>
+        <p>Event handlers connect player actions to game methods:</p>
+
+        <ul class="event-handler-list">
+            <li>Selecting Roll Dice starts the animation and dice request.</li>
+            <li>Selecting a die changes whether it is held.</li>
+            <li>Selecting an available score box records the score and ends the turn.</li>
+            <li>Selecting New Game resets the game, with a confirmation prompt if progress has been made</li>
+        </ul>
+        <p class="eyebrow">JQuery</p>
+        <p> We use JQuery helps draw each die by adding span elements for the dots.
+             CSS positions those dots to represent values from one to six. 
+             It also updates classes, attributes, and disabled states.</p>
+        <p>The visual dice animation uses jQuery’s .animate() method to change an angle over 600 milliseconds. During each animation step,
+        the code applies a CSS transform: rotate(...) to the die. Held dice are excluded from this animation.</p>
+    
+    
+    </section>
+
+    <section aria-labelledby="yatzee-server">
+        <h3 id="yatzee-server">Server: generating random dice rolls</h3>
+    
+        <p>
+            The server uses Node.js and Express. It provides a GET endpoint
+            called <code>/roll-dices</code>, which generates five random
+            integers between one and six using
+            <code>Math.floor(Math.random() * 6) + 1</code>.
+            The server returns these values as a JSON array.
+        </p>
+    
+        <p>
+            The browser requests these values using the Fetch API.
+            The server generates five values for each request, but the
+            client only replaces the values of dice that are not held.
+        </p>
+    
+        <p>
+            This demonstrates communication between a browser and a server.
+            However, scoring and game state are still managed in the browser,
+            so server-generated rolls alone do not prevent client-side
+            manipulation.
+        </p>
+    </section>
+     <section aria-labelledby="yatzee-css-layout">
+        <h3 id="yatzee-css-layout">CSS: appearance and responsive layout</h3>
+
+
+        <p>CSS controls how the game looks. The stylesheet defines reusable values in :root, including green and gold colours,
+        spacing sizes, rounded corners, and shadows. These CSS variables are then reused throughout the stylesheet. For example,
+        var(--green) supplies the same green colour to multiple interface elements.</p>
+
+        <p>The stylesheet applies different appearances and/or techniques to different elements. 
+            Flexbox is used to arrange specifically the dice and controls but for wrapping when necessary. 
+            Scoreboxes also have different appearance based on whether they are unused, a selectable preview option, recorded or unavailable. </p>
+    </section>
+    <section aria-labelledby="api-json-async">
+        <h3 id="api-json-async">Use of Fetch API, JSON and Asynchronous javascript</h3>
+        <p>The program uses the following Fetch API to request Dice Values:</p>
+        
+        <pre><code>const response = await fetch("/roll-dices");
+        const serverDiceValues = await response.json();</code></pre>
+        <p>The code uses requests dice values in JSON format with an asynchronous application of await & async.
+            One application of this is the Promise.all() method, 
+            which waits for all five dice to finish their rotation animation before updating the interface with the new values.
+        </p>
+    </section>
+<section aria-labelledby="yatzee-scoring">
+    <h3 id="yatzee-scoring">Scoring techniques</h3>
+        <p>The scoring engine uses arrays, objects, loops, and array methods to evaluate the dice.</p>
+        <ul>
+            <li>reduce() to add dice values and calculate subtotals.</li>
+            <li>every() to check that all dice satisfy a condition.</li>
+            <li>some() to check whether a matching count or available category exists.</li>
+            <li>Set to remove duplicate values when checking a small straight.</li>
+            <li>sort() to arrange values for straight detection.</li>
+        </ul>
+    </section>
+
+    <section aria-labelledby="yatzee-accessibility">
+        <h3 id="yatzee-accessibility">Accessbility Features</h3>
+        <ul class="Acessibility-list">
+            <li>Native buttons for game actions.</li>
+            <li>aria-pressed to indicate whether a die is held.</li>
+            <li>Updated aria-label values describing dice and score buttons.</li>
+            <li>role="status" for changing game messages.</li>
+            <li>Table captions and heading scopes.</li>
+            <li>Visible keyboard-focus outlines.</li>
+        </ul>
+    </section>
+
+
+
+
+    <figure class="project-figure">
+        <a href="Projects/Yatzee/Images/YtzSlimFullScreenshot.png">
+            <img
+                class="project-image"
+                src="Projects/Yatzee/Images/YtzSlimFullScreenshot.png"
+                alt="Yatzee game in progress with selected dice and recorded scores in a slimmer mobile view"
+                loading="lazy"
+            >
+        </a>
+
+        <figcaption>
+        Yatzee game in progress with selected dice and recorded scores in a slimmer mobile view
+        </figcaption>
+    </figure>
+
+    <section aria-labelledby="error-handling">
+        <h3 id="error-handling">Error handling</h3>
+        <p>The dice request checks response.ok before using the response. If the request fails, the dice class returns false, and
+        the game displays a message explaining that it could not roll the dice. A failed request does not increase the roll
+        counter.</p>
+        <p>The scoring engine also checks that a dice array contains exactly five integers between one and six. Before recording a
+        score, it verifies that the category exists, has not already been used, and is allowed under the implemented Joker rules</p>
+    </section>
+    <div class="button-group">
+        <!-- Replace this placeholder with the actual GitHub folder URL. -->
+        <a class="button button-primary"
+           href="https://github.com/GauisCode/cst3106_labs/tree/main/Lab7">
+            View Source Code
+        </a>
+    </div>
+
+    <p class="project-note">
+        Screenshots show the local application. A live playable
+        version is not linked yet.
+    </p>
+
+</article>
+            </section>
+        </main>
+        <footer class="site-footer"> 
+            <p>© 2026 Jamal St. Lewis · CST3106 Portfolio</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,646 @@
+/* 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+Portfolio Project Stylesheet
+Jamal St. Lewis
+Page Style & Markdown Design System
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+*/
+/*
+-----------------------------------------------------------------------------------------
+Section 1:
+Root Styles & Formatting
+Colors, spacing, effects
+-----------------------------------------------------------------------------------------
+*/
+
+/* 
+having all of the colours, spacing, and effects in one place makes it easier 
+to change the design system of the project.
+will only need to call var() and the -- type to get the colours, spacing or effect
+https://www.w3schools.com/css/css3_variables.asp
+*/
+:root {
+    /*
+    Project brand colours
+    Going with a dark green and gold accent theme
+    some dark some dark blue
+    confirmed style colours using https://coolors.co/?home
+    */
+    /* Green Main colour*/
+    --green-dark: #0B3D2E;
+    --green: #146c4e;
+    --green-hover:#0e513b;
+
+    /* Gold Accent Colours*/
+    --gold: #d5a72c;
+    --gold-dark: #a66e00;
+    --gold-light: #fff4d6;
+    --gold-soft: #f8e2a0;
+
+    /* Neutral colours options */
+  --text: #1f2937;
+  --text-on-dark: #e5e7eb;
+  --muted: #4b5563;
+  --page: #f6f7f5;
+  --surface: #ffffff;
+  --border: #d1d5db;
+
+  /* Typography Style*/
+  --font-family: Aptos, Arial, Helvetica, sans-serif;
+
+  /* Spacing sets */
+  /* 
+  choosing multiple of 8 for spacing as per commmon practice
+  https://www.conceptfusion.co.uk/post/web-design-spacing-and-sizing-best-practices
+  */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Effects to re-use*/
+  --radius: 8px;
+  --shadow: 0 4px 15px rgba(11, 61, 46 , 0.1);
+
+}
+
+/* border box for padding*/
+* {
+    box-sizing: border-box;
+}
+
+/* Main page style set*/
+
+body {
+    margin: 0;
+    background-color: var(--page);
+    color: var(--text);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+/* 
+-----------------------------------------------------------------------------------------
+Section 2:
+Header & Navigation Styles
+-----------------------------------------------------------------------------------------
+*/
+
+.site-header {
+    background-color: var(--green-dark);
+    border-bottom: 3px solid var(--gold);
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-md) var(--space-xl);
+}
+
+.site-logo{
+    color: var(--surface);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--surface);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* 
+nav link hover, focus, and current page styles
+nav  are for accessibility and usability, so users can see where they are on the site 
+and what links they can click on
+*/
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a[aria-current="page"] {
+    color: var(--gold-soft);
+    text-decoration: underline;
+}
+
+/* 
+-----------------------------------------------------------------------------------------
+Section 3:
+Headings, Links & labels
+-----------------------------------------------------------------------------------------
+*/
+
+
+/* 
+descending in font size because h1 is biggest heading and smaller as h# increases
+*/
+h1,h2,h3{
+    color: var(--green);
+}
+
+h1 {
+    font-size:2.35rem;
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.15rem;
+}
+a {
+    color: var(--green);
+}
+
+a:focus{
+    outline:3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+.eyebrow {
+    margin: 0 0 var(--space-sm);
+    color:var(--gold-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* 
+-----------------------------------------------------------------------------------------
+Section 4: 
+Homepage split layout
+-----------------------------------------------------------------------------------------
+*/
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(280px, 40%) minmax(0, 60%);
+    min-height: 500px;
+}
+
+.hero-intro{
+    padding: var(--space-3xl);
+    background-color: var(--green-dark);
+    color: var(--surface);
+}
+.hero-intro h1{
+    margin: 0;
+    color: var(--surface);
+}
+.hero-intro .eyebrow {
+    color: var(--gold-soft);
+}
+
+.hero-role {
+    margin-top: var(--space-md);
+    color: var(--gold-soft);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.hero-summary {
+    max-width: 35ch;
+    margin-top: var(--space-lg);
+    color: var(--text-on-dark);
+}
+
+.hero-contact {
+    margin-top: var(--space-xl);
+}
+
+.hero-contact a {
+    color: var(--surface);
+    font-weight: 700;
+}
+
+.hero-content{
+    padding: var(--space-3xl);
+    background-color: var(--surface);
+}
+
+.hero-content p {
+    max-width: 65ch;
+}
+
+.hero-content h2 {
+    max-width: 18ch;
+    margin-top: 0;
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px var(--gold);
+}
+
+.button-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+/* 
+-----------------------------------------------------------------------------------------
+Section 5:
+Buttons
+-----------------------------------------------------------------------------------------
+*/
+
+.button {
+    display: inline-block;
+    padding: 12px var(--space-md);
+    border: 2px solid transparent;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button-primary {
+    border-color: var(--green);
+    background-color: var(--green);
+    color: var(--surface);
+
+}
+
+.button-primary:hover,
+.button-primary:focus{
+    border-color: var(--green-hover);
+    background-color: var(--green-hover);
+    color: var(--surface);
+}
+
+.button-secondary {
+    border-color:var(--gold-dark);
+    background-color: var(--surface);
+    color: var(--gold-dark);
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+    background-color: var(--gold-light);
+}
+
+/* 
+-----------------------------------------------------------------------------------------
+Section 6: 
+regular page layout
+-----------------------------------------------------------------------------------------
+*/
+
+.page-section,
+.standard-page{
+    max-width:1200px;
+    margin: 0 auto;
+    padding: var(--space-3xl) var(--space-xl);
+}
+
+.page-section h2,
+.standard-page h1 {
+    margin-top: 0;
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--gold);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.feature-card,
+.coming-soon-card {
+    padding: var(--space-xl);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.feature-card h3,
+.coming-soon-card h2 {
+    margin-top:0;
+}
+
+.feature-number {
+    margin: 0 0 var(--space-sm);
+    color: var(--gold-dark);
+    font-weight: 700;
+}
+
+.page-intro {
+    max-width: 65ch;
+    font-size: 1.1rem;
+}
+
+.coming-soon-card {
+    max-width: 720px;
+    margin-top: var(--space-xl);
+}
+
+
+/* 
+-----------------------------------------------------------------------------------------
+Section 7: 
+Resume Page Layout 
+-----------------------------------------------------------------------------------------
+*/
+
+.resume {
+    max-width: 900px;
+    margin: var(--space-2xl) auto;
+    padding: var(--space-2xl);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.name-header {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 3px solid var(--gold);
+    text-align: center;
+}
+
+.name-header h1 {
+    margin: 0;
+}
+
+.contact-info {
+    margin: var(--space-md) 0 0;
+    color: var(--muted);
+}
+
+.resume h2 {
+    margin-top: var(--space-xl);
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    color: var(--green);
+    font-size: 1.25rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.resume h3 {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.05rem;
+}
+
+.resume-item {
+    margin-bottom: var(--space-lg);
+}
+
+.item-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    align-items: baseline;
+}
+
+.item-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.resume ul {
+    padding-left: 24px;
+}
+
+.resume li {
+    margin-bottom: 6px;
+}
+
+/* 
+-----------------------------------------------------------------------------------------
+Section 8: 
+Footer
+-----------------------------------------------------------------------------------------
+*/
+
+.site-footer {
+    padding: var(--space-lg);
+    background-color: var(--green-dark);
+    border-top: 3px solid var(--gold);
+    color: var(--text-on-dark);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* 
+-----------------------------------------------------------------------------------------
+Section 9:
+Layout Responsiveness
+-----------------------------------------------------------------------------------------
+*/
+
+@media (max-width: 800px) {
+    .site-nav{
+        align-items: flex-start;
+        flex-direction: column;
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .hero {
+        display: block;
+    }
+
+    
+
+    .hero-intro,
+    .hero-content {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-section,
+    .standard-page {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    .resume {
+        margin: 0;
+        padding: var(--space-xl) var(--space-lg);
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .item-heading {
+        display: block;
+    }
+
+    .item-heading p{
+        margin-top: var(--space-sm);
+        white-space: normal;
+    }
+}
+
+@media (max-width: 450px){
+    .nav-links{
+        gap: var(--space-sm);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-intro,
+    .hero-content,
+    .page-section,
+    .standard-page {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .feature-card,
+    .coming-soon-card {
+        padding: var(--space-lg);
+    }
+}
+
+/*
+--------------------------------------------------
+Project showcases
+--------------------------------------------------
+*/
+
+.project-showcase {
+    margin-top: var(--space-xl);
+    padding: var(--space-xl);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.project-heading h2 {
+    margin: 0 0 var(--space-md);
+}
+
+.project-summary {
+    max-width: 65ch;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.project-figure {
+    margin: var(--space-xl) 0;
+}
+
+.project-figure a {
+    display: block;
+    border-radius: var(--radius);
+}
+
+.project-image {
+    display: block;
+    width: auto;
+    max-width: auto;
+    height: auto;
+    margin-inline: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.project-figure figcaption {
+    margin-top: var(--space-sm);
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.project-description p {
+    max-width: 75ch;
+}
+
+.project-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-xl);
+    margin: var(--space-xl) 0;
+}
+
+.project-details h3 {
+    margin-top: 0;
+}
+
+.project-details ul {
+    padding-left: var(--space-lg);
+}
+
+.project-details li {
+    margin-bottom: var(--space-sm);
+}
+
+.technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.technology-list li {
+    padding: var(--space-xs) var(--space-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--page);
+    color: var(--green-dark);
+    font-size: 0.9rem;
+}
+
+.project-note {
+    margin-top: var(--space-md);
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Homepage project preview */
+
+.project-preview-image {
+    display: block;
+    width: auto;
+    max-width: auto;
+    height: auto;
+    margin: 0 auto var(--space-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+@media (max-width: 800px) {
+    .project-details {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .project-showcase {
+        padding: var(--space-lg);
+    }
+}
